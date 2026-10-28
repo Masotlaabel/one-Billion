@@ -1,0 +1,14 @@
+ONEBILLIONTH TECHNOLOGY — ANALYTICAL SERVICES REFINEMENT
+
+Only the following files changed from the prior Analytical Services + Direct Email build:
+- analytical-services/index.html
+- analytical-services.css
+
+Changes:
+- Replaced the heading “Evidence that supports your next decision.” with “What we do.”
+- Kept the two approved explanatory paragraphs intact, now placed in balanced, subtle editorial panels with short descriptive labels.
+- Reduced vertical padding and gaps on the Analytical Services page (not the main homepage).
+- Matched the three hero focus labels to the approved homepage badge treatment.
+
+Unchanged: Homepage HTML/CSS, images, logo/favicon, all seven services, directory, quotation form, email API and setup instructions.
+Direct email requires production provider credentials as explained in ANALYTICAL_ENQUIRY_EMAIL_SETUP.txt; local file mode does not deliver email.

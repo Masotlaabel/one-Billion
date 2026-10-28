@@ -1,0 +1,66 @@
+ONEBILLIONTH TECHNOLOGY — ANALYTICAL ENQUIRY EMAIL SETUP
+Updated 26 October 2026
+
+This website includes a real server-side API endpoint at:
+    /api/analytical-enquiry
+and a responsive web form at:
+    /analytical-services/
+
+What happens after configuration:
+1. Visitor completes the enquiry and may attach ONE PDF/Word/Excel/JPG/PNG file up to 3 MB.
+2. The website posts the fields and file securely over HTTPS to a Vercel Function.
+3. The Function validates required details, consent, file size and basic file signatures.
+4. The Function sends an email including the attachment to admin@onebillionthtech.co.za using Resend.
+5. A reference number appears on-screen only after the email provider accepts the request.
+   Acceptance by the provider is NOT the same as guaranteed inbox delivery.
+
+REQUIRED — One-time secure setup by a OneBillionth domain/Vercel administrator
+
+A. Create an account at https://resend.com and verify a dedicated SENDING subdomain:
+     send.onebillionthtech.co.za
+   Follow the DNS instructions Resend supplies for this subdomain.
+   IMPORTANT: Keep existing Zoho MX and TXT records for onebillionthtech.co.za unchanged.
+   Do NOT set the root domain's receiving MX to Resend: Zoho is the business mailbox.
+
+B. Create a restricted Resend sending API key for the verified sending domain.
+   DO NOT put it in HTML/JS, a .env file committed to Git, or a screenshot.
+
+C. In the EXISTING Vercel project (onebillionth-technology):
+   Settings -> Environment Variables -> Production
+     RESEND_API_KEY       = [your private Resend API key]
+     RESEND_FROM_EMAIL   = OneBillionth Analytical <enquiries@send.onebillionthtech.co.za>
+   Also set in Preview if preview submissions are required.
+   The FROM address must be on a domain verified in Resend.
+
+D. Redeploy the Vercel project after saving the environment variables.
+   Your existing GitHub repository and linked Vercel project remain unchanged.
+
+E. Test with your OWN details and a small benign PDF attachment:
+   https://onebillionthtech.co.za/analytical-services/
+   Verify that the website returns a reference, and that admin@onebillionthtech.co.za
+   receives the email AND attachment. Check Zoho Spam if necessary. Review Resend logs.
+
+F. Before promoting the email intake publicly, add production-grade spam/abuse
+   protection (e.g. Turnstile + server-side verification or durable rate-limits),
+   a published privacy notice, and suitable retention policies for submitted files.
+
+IMPORTANT OPERATIONAL NOTES
+- The file:// preview in Chrome cannot access the Vercel API; submissions will report that they
+  were NOT sent. Navigation, layout and technique search can be reviewed locally.
+- Max attachment is 3 MB due to Vercel Function 4.5 MB total request limit.
+- The API uses the Node.js Web Request signature and built-in fetch; no npm packages are required.
+- The API key is never included in the website ZIP.
+- If environment variables are missing, the server returns 503 and informs the visitor that
+  direct online submissions are not yet configured; it never reports false success.
+- If the provider accepts the request but fails to deliver the email, investigate the provider logs.
+- Email contents are plain text to avoid injecting HTML from visitor-supplied fields.
+- Uploaded Office documents and PDFs are NOT virus-scanned by this basic system.
+  Only open trusted attachments and use email/security filtering before downloading them.
+- No files are kept in website storage by this code. Content is transmitted directly to Resend,
+  and email/service-provider retention policies may apply.
+
+SOURCE REFERENCES
+https://vercel.com/docs/functions/runtimes/node-js
+https://vercel.com/docs/functions/limitations
+https://resend.com/docs/send-with-attachments
+https://resend.com/docs/dashboard/domains/introduction
