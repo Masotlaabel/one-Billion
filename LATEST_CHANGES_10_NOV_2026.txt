@@ -1,0 +1,25 @@
+OneBillionth Technology — Targeted Refinement (10 November 2026)
+
+This update is based on the previous marked-review multipage delivery.
+
+Home:
+- Removed the entire "EXPLORE THE WEBSITE" section (including the internal navigation instruction and five page cards).
+- Moved the approved "Analysis across research and industry." and "WHY ONEBILLIONTH" content from Analytical Services to Home.
+- Introduced an "Explore Analytical Services" button linking to the dedicated Analytical Services page.
+- Kept compact spacing and two-column desktop / stacked mobile presentation.
+
+Analytical Services:
+- Removed the entire original "Analysis across research and industry / WHY ONEBILLIONTH" block to avoid duplicate content.
+- Retained the seven services, directory, quotation form and existing images.
+
+About:
+- Removed only the two small images at the bottom of the "From Research to Application" section.
+- All other imagery, including the larger photograph beside that section, remains unchanged.
+
+Typography:
+- Slight increase to section eyebrow labels on desktop/mobile (e.g. OUR APPROACH and SERVICES IN DETAIL).
+
+No changes to logo, favicon, email endpoint, other page content or navigation behavior.
+
+Local review: Open index.html, about.html and analytical-services/index.html directly, or serve the folder from a local HTTP server.
+Deployment: Copy site files into the existing Git repository without deleting .git; review changes; then commit and push when approved.

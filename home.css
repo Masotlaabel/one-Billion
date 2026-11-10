@@ -894,3 +894,182 @@ button,input,select,textarea{font:inherit}
   .hero-home{padding-block:22px 26px}
   .hero-home-inner{align-items:start}
 }
+
+
+/* Multipage refinement update */
+body.subpage .hero-home{padding-top:clamp(2.5rem,5vw,4.5rem);padding-bottom:clamp(2.5rem,5vw,4rem);}
+.page-overview-links{padding-top:3.5rem;padding-bottom:3.5rem;}
+.page-card-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:2rem;}
+.page-card{display:flex;flex-direction:column;gap:.8rem;padding:1.4rem;border:1px solid var(--line);border-radius:1.2rem;background:#fff;color:inherit;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;}
+.page-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(7,19,35,.08);border-color:rgba(19,192,210,.28);}
+.page-card span{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+.page-card h3{font-size:1.15rem;line-height:1.25;margin:0;color:var(--ink);}
+.page-card p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.65;}
+.subpage-hero .hero-photo img{min-height:420px;object-fit:cover;}
+@media (max-width:1100px){.page-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:680px){.page-card-grid{grid-template-columns:1fr;}}
+
+
+/* Client's 29 October marked review — multipage-only refinements.
+   Preserve approved logo, palette and written content. */
+@media (min-width: 1041px) {
+  .site-header { grid-template-columns: minmax(230px,280px) minmax(0,1fr) auto; gap:16px; }
+  .desktop-nav { gap:4px; }
+}
+.desktop-nav a {
+  padding:11px 13px;
+  border-radius:999px;
+  transition:color .2s, background .2s,box-shadow .2s;
+}
+.desktop-nav a::after { display:none; }
+.desktop-nav a:hover { color:#066f79; background:#f1fafb; }
+.desktop-nav a.active,
+.desktop-nav a[aria-current="page"] {
+  color:#075961;
+  background:#e9fafb;
+  box-shadow:inset 0 0 0 1px #afe1e4, 0 2px 7px rgba(13,150,159,.10);
+  font-weight:800;
+}
+.desktop-nav a.active::before,
+.desktop-nav a[aria-current="page"]::before {
+  content:"";position:absolute;left:35%;right:35%;bottom:4px;height:2px;
+  border-radius:99px;background:#0baeb7;
+}
+.mobile-menu a.active,.mobile-menu a[aria-current="page"] {
+  color:#075961;background:#e9fafb;border-left:3px solid #0aa9ae;
+  border-radius:6px;padding-left:12px;
+}
+.eyebrow,.section-kicker{font-size:12px;letter-spacing:1.7px}
+.principles-grid article span,.service-label{font-size:11.5px;letter-spacing:1.1px}
+body.subpage .hero-home{padding-top:25px;padding-bottom:27px}
+body.subpage .hero-home-inner{align-items:start}
+body.subpage .hero-home-copy{padding-top:7px}
+body.subpage .hero-photo,body.subpage .hero-photo img{height:405px;min-height:405px;max-height:405px}
+body.subpage .hero-photo img{object-position:center;object-fit:cover}
+body.subpage .section{padding-top:38px;padding-bottom:38px}
+body.subpage .photo-story-section>.section{padding-top:30px;padding-bottom:34px}
+body.subpage .services-section>.section{padding-top:34px;padding-bottom:39px}
+body.subpage .proof-section>.section{padding-top:38px;padding-bottom:38px}
+body.subpage .team-section{padding-top:32px;padding-bottom:42px}
+body.subpage .experience-section>.section{padding-top:32px;padding-bottom:32px}
+body.subpage .contact-section>.section{padding-top:38px;padding-bottom:43px}
+body.subpage .section-intro{margin-bottom:23px}
+body.subpage .principles-grid{margin-top:31px}
+body.subpage .principles-grid article{min-height:200px;padding:24px 27px}
+body.subpage .about-layout{gap:42px}
+body.subpage .about-photo img{height:430px;object-position:center}
+body.subpage .proof-grid{gap:38px;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr)}
+body.subpage .proof-photo{display:flex;align-items:center;justify-content:center;background:#f4f8f9;border-radius:13px;overflow:hidden}
+body.subpage .proof-photo img{height:430px;width:100%;object-fit:contain;object-position:center}
+body.subpage .proof-copy>p{font-size:15px;line-height:1.65}
+body.subpage .proof-points{margin-top:20px}
+body.subpage .proof-points div{padding:17px}
+body.subpage .support-services{margin-top:35px;padding-top:27px}
+body.subpage .process-section>.section{padding-top:37px;padding-bottom:39px}
+body.subpage .audience-section{padding-top:37px;padding-bottom:39px}
+body.subpage .team-heading{margin-bottom:30px}
+body.subpage .page-card-grid{margin-top:18px}
+body.subpage .team-section h2,body.subpage .about-copy h2{font-size:clamp(37px,3vw,47px)}
+@media(max-width:1040px){
+ .desktop-nav{gap:3px}
+ .desktop-nav a{font-size:12px;padding:9px 8px}
+}
+@media(max-width:760px){
+ body.subpage .hero-home{padding-top:18px;padding-bottom:23px}
+ body.subpage .hero-photo,body.subpage .hero-photo img{height:280px;min-height:280px;max-height:280px}
+ body.subpage .section,body.subpage .proof-section>.section{padding-top:28px;padding-bottom:30px}
+ body.subpage .principles-grid{margin-top:22px}
+ body.subpage .proof-photo img{height:auto;max-height:320px}
+ body.subpage .about-photo img{height:auto;max-height:390px}
+ .eyebrow,.section-kicker{font-size:11.5px}
+}
+
+
+/* Final size and spacing check — smaller subpage hero, tighter mobile badges. */
+body.subpage .hero-home h1{font-size:clamp(37px,3.6vw,52px);line-height:1.06;letter-spacing:-2.4px;margin:14px 0 18px}
+body.subpage .hero-home-copy>p{font-size:15.5px;line-height:1.65}
+body.subpage .hero-actions{margin-top:22px}
+body.subpage .hero-focus{margin-top:20px;gap:9px}
+body.subpage .hero-focus span{min-height:37px;font-size:13px;padding:9px 13px;line-height:1.12}
+body.subpage .hero-photo,body.subpage .hero-photo img{height:360px;min-height:360px;max-height:360px}
+@media(max-width:760px){
+  body.subpage .hero-home h1{font-size:clamp(34px,8.9vw,43px);line-height:1.06;letter-spacing:-1.75px}
+  body.subpage .hero-home-copy>p{font-size:14.5px;line-height:1.62}
+  body.subpage .hero-actions{margin-top:18px}
+  body.subpage .hero-focus{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  body.subpage .hero-focus span{width:auto;min-height:34px;padding:8px 10px;font-size:12.5px}
+  body.subpage .hero-photo,body.subpage .hero-photo img{height:260px;min-height:260px;max-height:260px}
+  html,body{overflow-x:clip}
+}
+
+
+/* 10 November homepage-only move of approved Analytical Services content. */
+.home-analytical-insights{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.home-insights-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.90fr) minmax(0,1.10fr);
+  align-items:center;
+  gap:clamp(24px,3.5vw,54px);
+  padding-top:44px;
+  padding-bottom:44px;
+}
+.home-insights-intro h2{
+  margin:13px 0 15px;
+  font-size:clamp(32px,3.1vw,46px);
+  line-height:1.1;
+  letter-spacing:-1.55px;
+  font-weight:730;
+  color:#111820;
+  max-width:650px;
+}
+.home-insights-description{
+  color:#4e606b;
+  font-size:clamp(15px,1.04vw,16px);
+  line-height:1.72;
+  margin:0 0 22px;
+  max-width:685px;
+}
+.home-insights-intro .button{min-height:47px}
+.home-why-panel{
+  border:1px solid #d9e6e9;
+  border-radius:15px;
+  background:#f7fbfb;
+  padding:25px 27px 22px;
+}
+.home-why-panel>.section-kicker{margin-bottom:17px}
+.home-benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:11px;
+}
+.home-benefit{
+  border:1px solid #dce8ea;
+  border-radius:9px;
+  background:#fff;
+  padding:17px 18px;
+  min-height:115px;
+}
+.home-benefit::before{
+  content:"";display:block;width:23px;height:3px;
+  background:var(--teal-deep);border-radius:3px;margin-bottom:11px;
+}
+.home-benefit strong{display:block;color:#152633;font-size:15px;line-height:1.25;margin-bottom:6px}
+.home-benefit p{margin:0;color:#5c6872;font-size:13.5px;line-height:1.54}
+/* Slightly larger section eyebrow labels on all pages, not large body headings. */
+.eyebrow,.section-kicker{font-size:13px;letter-spacing:1.7px}
+@media(max-width:1000px){
+  .home-insights-inner{grid-template-columns:1fr;gap:24px;padding-top:35px;padding-bottom:35px}
+  .home-insights-intro h2{max-width:none}
+  .home-insights-description{max-width:900px}
+}
+@media(max-width:650px){
+  .home-insights-inner{padding-top:28px;padding-bottom:30px;gap:20px}
+  .home-insights-intro h2{font-size:clamp(31px,8vw,39px);letter-spacing:-1.1px}
+  .home-why-panel{padding:18px 16px}
+  .home-benefit-grid{grid-template-columns:1fr;gap:9px}
+  .home-benefit{padding:15px 16px;min-height:auto}
+  .eyebrow,.section-kicker{font-size:12.5px;letter-spacing:1.5px}
+}

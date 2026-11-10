@@ -43,15 +43,6 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
   revealObserver.observe(el);
 });
 
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) return;
-    const id = entry.target.id;
-    navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
-  });
-},{rootMargin:'-35% 0px -55% 0px',threshold:0});
-document.querySelectorAll('#home,#about,#services,#team,#contact').forEach(section=>sectionObserver.observe(section));
-
 const contactForm=document.querySelector('[data-review-form]');
 if(contactForm){
   contactForm.addEventListener('submit',e=>{
@@ -120,3 +111,11 @@ document.querySelectorAll('[data-slideshow]').forEach(slideshow => {
   show(0);
   start();
 });
+
+
+
+// Multipage active navigation. Explicit per-page state; no scroll-based overrides.
+(function () {
+  const current = document.querySelector('.desktop-nav a[aria-current="page"]');
+  document.querySelectorAll('.desktop-nav a').forEach(a => a.classList.toggle('active', a === current));
+})();

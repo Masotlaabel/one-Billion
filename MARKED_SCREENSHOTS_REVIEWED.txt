@@ -1,0 +1,29 @@
+OneBillionth Technology — Client Marked Review — 10 November 2026
+
+Reviewed all 12 full-size WhatsApp screenshots contained in the 10 November annotated-image ZIP.
+
+Analytical Services:
+- Removed hero photo's “Laboratory Analysis / 01–07” caption (already absent in supplied multipage master).
+- Increased emphasis of Scientific Interpretation & Application label.
+- Changed overview heading and simplified the introductory instruction.
+- Removed numbering from seven service cards and all service detail labels.
+- Reworked all 7 sets of techniques/equipment and typical applications into scannable bullet lists.
+- Removed “where configured” phrasing from service 04 application list and excess end qualifier from service 05.
+- Retained a clear safety qualification for water-related testing.
+- Service 06 uses the former Service 07 photograph; Service 07 uses the supplied new laboratory image.
+- Removed struck-through Who We Work With small eyebrow; increased Why OneBillionth eyebrow.
+- Changed How It Works eyebrow to How We Work.
+
+Main site:
+- Removed the word “funding” from the homepage introductory sentence (only where marked).
+- Enlarged small section-label typography, including About, Mission, Vision, Our Approach, What We Do, and primary service labels.
+- Removed the marked See How We Support Innovation link from About.
+- Replaced badly cropped proof-section photograph with a clear full-instrument photograph and containment cropping.
+- Changed general contact email to admin@onebillionthtech.co.za (already corrected in supplied source).
+- Preserved six separate top-level pages and improved active-page state on desktop/mobile.
+- Selected distinct hero images from the approved slideshow library and excluded those images from the slideshow.
+- Reduced excessive page padding and duplicated homepage proof section.
+
+Note: red circles without written instructions were interpreted conservatively, primarily as requests for stronger small-label typography.
+
+No changes were made to the branded horizontal logo, favicon, or existing analytical enquiry backend.

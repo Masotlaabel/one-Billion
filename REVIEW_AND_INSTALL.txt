@@ -1,0 +1,25 @@
+ONEBILLIONTH TECHNOLOGY - MULTI-PAGE CLIENT REVIEW
+
+This version was corrected against ALL 12 annotated WhatsApp screenshots from 29 Oct 2026, supplied on 10 Nov.
+The detailed list of screenshot-based changes is in MARKED_SCREENSHOTS_REVIEWED.txt.
+
+Pages:
+- index.html: Home
+- about.html: About
+- services.html: Services
+- analytical-services/index.html: Analytical Services
+- team.html: Team
+- contact.html: Contact
+
+Important:
+- Selected tab is shown with a distinct, accessible teal pill on desktop and mobile.
+- Each hero photograph is different and no hero image is used elsewhere in the website.
+- The approved horizontal logo and favicon are preserved.
+- The original analytical enquiry API is preserved. The general Contact page still contains the existing review contact form and should not be represented as a live email-submission function without configuring its own backend.
+
+LOCAL REVIEW:
+Extract the folder and open index.html. Use the navigation links to test each separate page.
+For deployment, copy the CONTENTS of the extracted folder into your EXISTING Git repository folder, preserving .git and any private local secrets; review git status before committing.
+Do not upload or replace .git or .env.local.
+
+This is a review build; it has not been pushed to GitHub or Vercel by ChatGPT.
