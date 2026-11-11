@@ -1073,3 +1073,112 @@ body.subpage .hero-photo,body.subpage .hero-photo img{height:360px;min-height:36
   .home-benefit{padding:15px 16px;min-height:auto}
   .eyebrow,.section-kicker{font-size:12.5px;letter-spacing:1.5px}
 }
+
+
+/* 11 November 2026 | widescreen proportionality correction
+   The earlier full-viewport hero override conflicted with the bounded
+   navigation/section grid. Keep all hero contents aligned with --max.
+   Changes below are intentionally restricted to desktop/tablet layout. */
+@media (min-width: 1180px) {
+  .hero-home-inner,
+  body.subpage .hero-home-inner {
+    width: min(var(--max), calc(100% - 64px));
+    max-width: var(--max);
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    gap: clamp(34px, 3.2vw, 62px);
+    align-items: center;
+  }
+  .hero-home {
+    padding-top: 32px;
+    padding-bottom: 30px;
+  }
+  .hero-home-copy,
+  body.subpage .hero-home-copy {
+    padding-top: 0;
+    align-self: center;
+  }
+  .hero-photo {
+    height: clamp(350px, 26vw, 460px);
+    min-height: 0;
+    max-height: 460px;
+    border-radius: 17px;
+    align-self: center;
+  }
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    object-fit: cover;
+  }
+  .hero-home h1 {
+    font-size: clamp(48px, 3.35vw, 63px);
+    line-height: 1.055;
+    letter-spacing: -2.8px;
+    margin: 16px 0 20px;
+  }
+  .hero-home-copy > p {
+    max-width: 620px;
+    font-size: clamp(15px, .89vw, 17px);
+    line-height: 1.67;
+  }
+  .hero-actions { margin-top: 24px; }
+  .hero-focus { margin-top: 23px; }
+
+  body.subpage .hero-home {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  body.subpage .hero-photo,
+  body.subpage .hero-photo img {
+    height: clamp(332px, 22vw, 395px);
+    min-height: 0;
+    max-height: 395px;
+  }
+  body.subpage .hero-home h1 {
+    font-size: clamp(38px, 2.75vw, 52px);
+    line-height: 1.075;
+    letter-spacing: -2.1px;
+    margin: 13px 0 16px;
+  }
+  body.subpage .hero-home-copy > p {
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 590px;
+  }
+  body.subpage .hero-actions { margin-top: 20px; }
+  body.subpage .hero-focus { margin-top: 17px; }
+  body.subpage .hero-focus span {
+    min-height: 33px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  body.subpage .contact-copy h2 {
+    font-size: clamp(34px, 2.75vw, 49px);
+    line-height: 1.11;
+    letter-spacing: -1.8px;
+  }
+}
+@media (min-width: 2200px) {
+  .hero-home-inner, body.subpage .hero-home-inner {
+    width: min(var(--max), calc(100% - 80px));
+  }
+}
+/* Mid-size screens: retain breathing room without leaving a disjointed gap. */
+@media (min-width: 761px) and (max-width: 1179px) {
+  .hero-home-inner {
+    width: calc(100% - 48px);
+    gap: 30px;
+  }
+  .hero-home { padding-top: 24px; padding-bottom: 24px; }
+  .hero-home h1 { font-size: clamp(41px, 4.2vw, 55px); letter-spacing: -2px; }
+  .hero-photo { height: 390px; min-height: 0; }
+  .hero-photo img { height: 100%; object-fit: cover; }
+  body.subpage .hero-photo,
+  body.subpage .hero-photo img {
+    height: 325px;
+    min-height: 0;
+    max-height: 325px;
+  }
+}
