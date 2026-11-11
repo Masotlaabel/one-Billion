@@ -1182,3 +1182,37 @@ body.subpage .hero-photo,body.subpage .hero-photo img{height:360px;min-height:36
     max-height: 325px;
   }
 }
+
+
+/* 11 November 2026 | homepage hero-only refinement
+   Keep the approved widescreen container, but remove the excessive gap
+   before the image. No other page heroes are affected. */
+@media (min-width: 1180px) {
+  body:not(.subpage) .hero-home {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+  body:not(.subpage) .hero-home-inner {
+    grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+    gap: clamp(18px, 1.65vw, 26px);
+    align-items: start;
+  }
+  body:not(.subpage) .hero-home-copy,
+  body:not(.subpage) .hero-photo {
+    align-self: start;
+  }
+}
+@media (min-width: 761px) and (max-width: 1179px) {
+  body:not(.subpage) .hero-home {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+  body:not(.subpage) .hero-home-inner {
+    gap: 20px;
+    align-items: start;
+  }
+  body:not(.subpage) .hero-home-copy,
+  body:not(.subpage) .hero-photo {
+    align-self: start;
+  }
+}
